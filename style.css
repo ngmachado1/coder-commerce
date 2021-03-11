@@ -1,0 +1,15 @@
+article{
+    -webkit-box-shadow: 0px 5px 43px -8px rgba(125,125,125,.6);
+-moz-box-shadow: 0px 5px 43px -8px rgba(125,125,125,.6);
+box-shadow: 0px 5px 43px -8px rgba(125,125,125,.6);
+}
+ul li{
+    list-style-type: none;
+    text-align: center;
+}
+.cart{
+    padding-top: 15px;
+    padding-right: 1em;
+    padding-left: 1em;
+
+}
