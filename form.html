@@ -54,12 +54,52 @@
                 </div>
                 <div class="mb-3 form-check">
                   <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                 
                   <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                  <!-- <input id="scriptBox" type="text" onkeypress="capturarEnter(event);" /> -->
                 </div>
                 <button type="submit" class="btn btn-primary" id="submit">Submit</button>
-            </form>
+           <!-- Opcion 1 -->
+           <!-- <input type="submit" class="btn btn-primary" id="submit" value="Haz click dentro de este botón" onclick="alert('Mensaje en el click')">Submit hola aquí</input> -->
+        
+           
+        </form>
         </div>
     </section>
+    <!-- Opcion 2 -->
+
+    <script>
+        document.getElementById("submit").addEventListener("click", mostrarAlert);
+        var array = ["texto1", "texto2"]
+        console.log(array[1], "arraaaaaaaay")
+        function mostrarAlert() {
+            
+            
+            alert('Mensaje en el click');
+        }
+    </script>
+    
+   
+
+<!-- opcion 3 -->
+<!-- <script>
+    document.getElementById("submit")
+    .onclick= mostrarAlert;
+
+    function mostrarAlert() {
+        alert('Mensaje en el click')
+    }
+
+</script>     -->
+
+ <!-- <script>
+       function capturarEnter(elEvento) {
+   if (elEvento.keyCode == 13) { // 13 es el código asociado a la tecla enter
+alert("presiono enter");        
+    }
+}
+
+    </script> -->
 
 
 </body>
