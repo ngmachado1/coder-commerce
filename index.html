@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <script defer src="products.js"></script>
+    <script defer src="cart.js"></script>
     <script defer src="app.js"></script>
     <title>Document</title>
 </head>
@@ -31,7 +32,7 @@
                         <a class="nav-link" href="form.html">Datos de Entrega</a>
                     </li>
                 </ul>
-                <form class="d-flex">
+                <form class="d-flex" id="search-form">
                     <input class="form-control me-3" type="search" placeholder="Buscar" aria-label="Search">
                     <button class="btn btn-outline-light" type="submit">Buscar</button>
                 </form>
@@ -63,46 +64,27 @@
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">Productos</h5>
-                        <ul>
-                            <li>
-                                item1
-                            </li>
-                            <li>
-                                item1
-                            </li>
-                            <li>
-                                item1
-                            </li>
-                            <li>
-                                item1
-                            </li>
-                            <li>
-                                item1
-                            </li>
-                        </ul>
+                        <ul id="mi-carrito"></ul>
                         <div class="card-text bg-dark text-light cart d-flex justify-content-between">
                             <p>Sub-total: </p>
-                            <p>$123 </p>
+                            <p id="subtotal">$123 </p>
                         </div>
-                        <div class="card-text cart d-flex justify-content-between">
+                        <!-- <div class="card-text cart d-flex justify-content-between">
                             <p class="">Envio:</p>
                             <p class="">$123</p>
-                        </div>
+                        </div> -->
                         <div class="card-text bg-dark text-light cart d-flex justify-content-between">
                             <p>Total:</p>
-                            <p>$123 </p>
+                            <p id="total">$123 </p>
                         </div>
 
 
-                        <a href="#" class="btn btn-outline-primary mt-4">COMPRAR</a>
-
+                        <a href="#" id="btn-checkout" class="btn btn-outline-primary mt-4">COMPRAR</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"
         integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi"

@@ -1,16 +1,22 @@
 //1 Crear objetos
 var productos = [
     {
+        id : 'aaa111',
+        title : "Notebook 1",
         img : "https://img.global.news.samsung.com/mx/wp-content/uploads/2019/01/Samsung-Notebook-Flash-4.jpg",
-        price : 85999
+        price : 101
     },
     {
+        id : 'bbb222',
+        title : "Notebook 2",
         img : "https://img.global.news.samsung.com/mx/wp-content/uploads/2019/01/Samsung-Notebook-Flash-4.jpg",
-        price : 85999
+        price : 202
     },
     {
+        id : 'ccc333',
+        title : "Notebook 3",
         img : "https://img.global.news.samsung.com/mx/wp-content/uploads/2019/01/Samsung-Notebook-Flash-4.jpg",
-        price : 85999
+        price : 303
     }
 ]
 
@@ -39,13 +45,13 @@ function Products(productos) {
                 src="${article.img}"
                 class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title">${article.title}</h5>
                 <h6>$${article.price}</h6>
 
                 <p class="card-text">Some quick example text to build on the card title and make up
                     the bulk
                     of the card's content.</p>
-                <a href="#" class=" btn btn-outline-dark">COMPRAR</a>
+                <a href="#" data-id=${article.id} class="btn-comprar btn btn-outline-dark">COMPRAR</a>
             </div>
             </article>
         </div>
@@ -58,14 +64,17 @@ function Products(productos) {
         var html = '';
 
         this[sourceProduct].forEach(product => {
-            html = html + this.buildHtmlProduct(product); 
+            html += this.buildHtmlProduct(product); 
         });
-        
+
         container.innerHTML = html;
+
+        Array.from(document.getElementsByClassName('btn-comprar')).forEach(function(boton) {
+            boton.addEventListener('click', function(event) {
+                myCart.add(event.target.dataset.id)
+            })
+        })
     }
-
-
-
 }
 
 
